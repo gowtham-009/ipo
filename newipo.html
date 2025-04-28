@@ -10,10 +10,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Basic styling */
-      .tabs {
-      }
-
+    
       .tab-titles {
         display: flex;
         justify-content: space-around;
@@ -443,7 +440,7 @@
         fetch(bseApiUrl)
           .then((response) => response.json())
           .then((data) => {
-            console.log("nfvj",data);
+          
                
             // Handle Open IPOs from BSE API
             if (Array.isArray(data.metaData.open)) {
@@ -464,6 +461,7 @@
 
             // Handle Upcoming IPOs from BSE API
             if (Array.isArray(data.metaData.upcoming)) {
+           
               data.metaData.upcoming.forEach((company) => {
                 bseCount += data.upcoming.open.length;
                 addCompanyToContainer(
